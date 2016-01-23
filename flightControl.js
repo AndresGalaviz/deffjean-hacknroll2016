@@ -38,21 +38,21 @@ Cylon.robot({
 						my.drone.down(Math.abs(position[1] - 120)/100);
 					} else {
 						if(normal[2] > 0.3) {
-							console.log("FRONT " + (normal[2] - 0.15));
+							console.log("FRONT " + (normal[2] - 0.3)*1.1);
 							stop = false;
 							active = true;
-							my.drone.forward(normal[2] - 0.15);
+							my.drone.forward((normal[2] - 0.30)*1.1);
 						} else if(normal[2] < -0.3) {
-							console.log("BACK " + (Math.abs(normal[2]) - 0.15));
+							console.log("BACK " + (Math.abs(normal[2]) - 0.3)*1.2);
 							stop = false;
 							active = true;
-							my.drone.back(Math.abs(normal[2]) - 0.15);
+							my.drone.back((Math.abs(normal[2]) - 0.3)*1.2);
 						} 
 						if(normal[0] > 0.3) {
-							console.log("LEFT " + (normal[0] - 0.2));
+							console.log("LEFT " + (normal[0] - 0.3));
 							stop = false;
 							active = true;
-							my.drone.left(normal[0] - 0.2);
+							my.drone.left(normal[0] - 0.3);
 
 						} else if(normal[0] < -0.3) {
 							console.log("RIGHT " + (Math.abs(normal[0]) - 0.3));
