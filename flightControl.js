@@ -35,7 +35,7 @@ Cylon.robot({
 						console.log("DOWN " + ((position[1] - 120)/100));
 						stop = false;
 						active = true;
-						my.drone.down((position[1] - 120)/100);
+						my.drone.down(abs(position[1] - 120)/100);
 					} else {
 						if(normal[2] > 0.3) {
 							console.log("FRONT " + (normal[2] - 0.15));
