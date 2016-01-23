@@ -70,6 +70,8 @@ Cylon.robot({
 						my.drone.back(0);
 						my.drone.left(0);
 						my.drone.right(0);
+						my.drone.clockwise(0);
+						my.drone.counterClockwise(0);
 						stop = false;
 						active = false;
 					}	
