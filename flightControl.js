@@ -32,7 +32,7 @@ Cylon.robot({
 						active = true;
 						my.drone.up((position[1] - 280)/100);
 					} else if(position[1] < 120) {
-						console.log("DOWN " + ((position[1] - 120)/100));
+						console.log("DOWN " + (Math.abs(position[1] - 120)/100));
 						stop = false;
 						active = true;
 						my.drone.down(Math.abs(position[1] - 120)/100);
