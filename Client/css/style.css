@@ -1,0 +1,17 @@
+body {
+     
+    background:#f4f4f4;
+}
+
+img#robot-image{
+
+	width:500px;
+}
+
+@media screen and (max-width:600px){
+
+	img#robot-image{
+		width:300px !important;
+	}
+
+}
