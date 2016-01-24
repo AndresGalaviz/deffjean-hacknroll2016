@@ -15,10 +15,13 @@ Cylon.robot({
 		var onFlight = false;
 		var stop = false;
 		var active = true;
+
 		my.leapmotion.on('frame', function(frame){
 			var hand = frame.hands[0];
 			if(frame.hands.length > 0) {
 				if(hand.timeVisible > 4) {
+					// var im = my.drone.getPngStream()
+					// console.log(im);
 					var position = hand.palmPosition;
 					var velocity = hand.palmVelocity;
 					var direction = hand.direction;
@@ -37,22 +40,22 @@ Cylon.robot({
 						active = true;
 						my.drone.down(Math.abs(position[1] - 120)/100);
 					} else {
-						if(normal[2] > 0.3) {
-							console.log("FRONT " + (normal[2] - 0.15));
+						if(normal[2] > 0.2) {
+							console.log("FRONT " + (normal[2] - 0.2));
 							stop = false;
 							active = true;
-							my.drone.forward(normal[2] - 0.15);
-						} else if(normal[2] < -0.3) {
-							console.log("BACK " + (Math.abs(normal[2]) - 0.15));
+							my.drone.front(normal[2] - 0.2);
+						} else if(normal[2] < -0.35) {
+							console.log("BACK " + (Math.abs(normal[2]) - 0.35));
 							stop = false;
 							active = true;
-							my.drone.back(Math.abs(normal[2]) - 0.15);
+							my.drone.back(Math.abs(normal[2]) - 0.35);
 						} 
 						if(normal[0] > 0.3) {
-							console.log("LEFT " + (normal[0] - 0.2));
+							console.log("LEFT " + (normal[0] - 0.3));
 							stop = false;
 							active = true;
-							my.drone.left(normal[0] - 0.2);
+							my.drone.left(normal[0] - 0.3);
 
 						} else if(normal[0] < -0.3) {
 							console.log("RIGHT " + (Math.abs(normal[0]) - 0.3));
@@ -66,7 +69,7 @@ Cylon.robot({
 						console.log("Stop");
 						my.drone.up(0);
 						my.drone.down(0);
-						my.drone.forward(0);
+						my.drone.front(0);
 						my.drone.back(0);
 						my.drone.left(0);
 						my.drone.right(0);
@@ -95,5 +98,6 @@ Cylon.robot({
 
 			
 		})
+
 	}
 }).start();
