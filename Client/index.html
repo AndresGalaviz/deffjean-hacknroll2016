@@ -9,6 +9,18 @@
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <html>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+<script src="node_modules/jquery.facedetection/src/jquery.facedetection.js"></script> 
+<script>
+    $('#picture').faceDetection({
+        complete: function (faces) {
+            console.log(faces);
+        }
+    });
+</script> 
+
+</html>
 </head>
 <body>
 
@@ -27,7 +39,8 @@
 				<div class="row">
 					<div class="col s12 center">
 						 
-						<img id="robot-image" src="http://placeimg.com/500/500/any">
+						
+						<img id="picture" src="img/nasa.jpg">
 						<p>Enjoy</p>
 					</div>
 				</div>
