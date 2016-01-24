@@ -1,8 +1,17 @@
 $(document).ready(function(){
 
-    console.log("hello");
+    console.log("Hello Robot!");
 
-    window.onload = function() {
+    setInterval(function(){
+
+        //http://192.168.43.70/picam/
+        var imgadress = "http://192.168.43.70/picam/cam_pic.php?time=" + new Date().getTime();        
+        $('#the-img').attr('src', imgadress);
+
+    }, 100);
+
+    /** FACE RECOGNITION - WORK IN PROGRESS **/
+   /* window.onload = function() {
     
         var smoother = new Smoother([0.9999999, 0.9999999, 0.999, 0.999], [0, 0, 0, 0]),
             video = document.getElementById('video'),
@@ -68,7 +77,7 @@ $(document).ready(function(){
                 glasses.src = e.src;
             }, false);
         });
-    };
+    };*/
 
 
 });

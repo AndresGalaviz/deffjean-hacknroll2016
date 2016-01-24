@@ -31,4 +31,12 @@ img#robot-image{
   border: 2px solid #FFF;
 }
 
+.video-cam-icon{
+
+	vertical-align: baseline; 
+	position: relative; 
+	top:20px;
+
+}
+
 
