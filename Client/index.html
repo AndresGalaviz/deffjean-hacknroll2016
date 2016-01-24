@@ -4,53 +4,85 @@
   <meta charset="utf-8">
   <title>Hello World</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet"> 
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
   <html>
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
-<script src="node_modules/jquery.facedetection/src/jquery.facedetection.js"></script> 
-<script>
-    $('#picture').faceDetection({
-        complete: function (faces) {
-            console.log(faces);
-        }
-    });
-</script> 
 
-</html>
 </head>
 <body>
 
-	<div class="page-flexbox-wrapper">
+	
 
+	<!-- Header section -->
+	<header>
 		<div class="section center">
-
 			<h5>1337 <span class="teal-text">Drone</span> with Face Recognition <i style="vertical-align: baseline; position: relative; top:20px;"class="medium material-icons">videocam</i> </h5>
-
 		</div>
-
 		<div class="divider"></div>
-		
+	</header>
+
+	<!-- Main image section -->
+	<main>
 		<div class="section">
 			<div class="container">
 				<div class="row">
 					<div class="col s12 center">
-						 
+						<!-- <img id="picture" src="img/nasa.jpg">
+						<p>Enjoy</p> -->
+
+						<video id="video"></video>
+
+
+						<div id="list">
+							<img src="img/sunglasses_0.png" style="width: 117px;">
+							<img src="img/sunglasses_1.png" style="width: 117px;">
+							<img src="img/sunglasses_2.png" style="width: 117px;">
+							<img src="img/sunglasses_3.png" style="width: 117px;">
+							<img src="img/sunglasses_4.png" style="width: 117px;">
+							
+						</div>
 						
-						<img id="picture" src="img/nasa.jpg">
-						<p>Enjoy</p>
+						<img id="glasses" src="img/sunglasses_0.png" style="position: absolute; display: block; opacity: 0">
+
 					</div>
 				</div>
 			</div>
 		</div>
+	</main>
+
+	<!-- Sticky footer -->
+  <footer class="page-footer teal lighten-2">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+          	<p>Image recognition by the camera of a flying AR Drone, controlled through Leap Motion. Made in at the 24h hackathon Hack&Roll at National University of Singapore 2016.
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2016 Andres Galaviz, Michael Novén, Alejandro Leal
+        <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
+        </div>
+      </div>
+  </footer>
 
 
-       </div>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+
+	<script type="text/javascript" src="http://jaysalvat.github.io/jquery.facedetection/releases/latest/jquery.facedetection.min.js"></script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+
+	<script src="js/compatibility.js"></script>
+	<script src="js/smoother.js"></script>
+	
+	<script src="js/objectdetect.js"></script>
+	<script src="js/objectdetect.frontalface.js"></script>
+
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
