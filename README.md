@@ -1,5 +1,7 @@
 Intuitive control of a AR Drone 2.0 with help of the leap motion and Raspberry Pi to broadcast a live video feed. A client fetches the images from the Pi and shows them in a web app (work on face recognition in progress). 
 
+Made at the hackathon Hack&Roll 2016 by Andres Galaviz, Michael Novén and Alejandro Leal Isla Flores. More info about the project [here](http://devpost.com/software/flying-cameraman).
+
 ### Stuff needed
 * AR Drone 2.0
 * Leap Motion device
